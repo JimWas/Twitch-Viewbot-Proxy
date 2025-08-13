@@ -9,6 +9,12 @@ A Python-based Twitch viewbot that simulates concurrent viewer sessions using SO
 - **Screenshot Capture**: Takes screenshots after 60 seconds of page load.
 - **GUI Log**: Displays real-time logs of session starts, proxy usage, and screenshot saves.
 
+Mandatory Requirements
+Provide your own private HTTP proxies to the proxies.txt file you select in the GUI or follow our Proxies Guide.
+The best proxy provider is webshare which is plug-and-play via copy and pasting your proxy list. Please use my referral link if you appreciate my hardwork to get working proxies: https://www.webshare.io/?referral_code=elgz3qlqssvs
+
+Chrome needs to be already installed on your system.
+
 ## Installation
 1. Clone the repository:
    ```bash
@@ -29,6 +35,9 @@ Create and activate a virtual environment:
 pip install selenium-wire webdriver_manager blinker
 
 Create a proxies.txt file with SOCKS5 proxies (format: username:password@host:port).
+Webshare is the easiest way to load your proxies via downloading the proxy list from their Dashboard and loading them into the GUI 
+https://www.webshare.io/?referral_code=elgz3qlqssvs
+
 
 Run the script:
 
