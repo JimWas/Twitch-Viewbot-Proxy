@@ -113,3 +113,29 @@ https://ko-fi.com/illphated57469
 
 ANY DONATION OR SHOP PURCHASE GETS SUPPORTER EDITION
 https://ko-fi.com/illphated57469
+
+
+
+
+----
+twitch
+viewbot
+twitch-bot
+twitch-viewer
+automation
+selenium
+python
+browser-automation
+headless-chrome
+proxies
+socks5
+http-proxy
+webscraper
+streaming
+twitch-tools
+twitch-automation
+python-bot
+twitch-script
+twitch-hacks
+screenshot-capture
+
