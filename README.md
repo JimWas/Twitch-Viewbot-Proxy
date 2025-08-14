@@ -26,7 +26,10 @@ Google Chrome must be installed.
 Python 3.8+
 
 Your own private HTTP/SOCKS5 proxies (Webshare recommended for simplicity).
-🔗 Get Webshare Proxies (Referral Link)
+Please support my hard work by using my referral link and you also get a 20% discount: https://www.webshare.io/?referral_code=elgz3qlqssvs
+Thanks in advance! 
+
+
 
 🛠 Installation & Setup
 
@@ -49,6 +52,9 @@ pip install selenium-wire webdriver_manager blinker
 
 
 Prepare your proxies:
+
+(Webshare recommended for simplicity).
+Please support my hard work by using my referral link and you also get a 20% discount: https://www.webshare.io/?referral_code=elgz3qlqssvs
 
 Create a file called proxies.txt
 
