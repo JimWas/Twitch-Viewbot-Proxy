@@ -5,6 +5,14 @@ It features an easy-to-use GUI, supports headed and headless Chrome browsers, ro
 
 ⚡ Keywords: twitch viewbot, twitch viewer bot, twitch automation, twitch proxy bot, twitch bot python, selenium twitch bot, twitch browser automation.
 
+
+FOR 10+ CONCURRENT SESSIONS PLEASE VISIT MY KO-FI
+https://ko-fi.com/illphated57469
+
+ANY DONATION OR SHOP PURCHASE GETS SUPPORTER EDITION
+https://ko-fi.com/illphated57469
+
+
 🚀 Key Features
 
 Multiple Concurrent Sessions — Launch 1–10 browser instances with configurable delays (30–60 seconds) to avoid detection.
@@ -99,3 +107,9 @@ Keywords list near the top so it’s indexed.
 Structured headings for Features, Installation, Disclaimer, License.
 
 Added cross-platform compatibility and proxy types to hit more search queries.
+
+FOR 10+ CONCURRENT SESSIONS PLEASE VISIT MY KO-FI
+https://ko-fi.com/illphated57469
+
+ANY DONATION OR SHOP PURCHASE GETS SUPPORTER EDITION
+https://ko-fi.com/illphated57469
