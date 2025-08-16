@@ -166,7 +166,7 @@ python webscraper.py
 
 Follow the GUI prompts:
 
-Enter Twitch stream URL (e.g., https://www.twitch.tv/illphated)
+Enter Twitch stream URL
 
 Set number of sessions (1–10)
 
