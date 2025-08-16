@@ -13,21 +13,24 @@ import time
 class WebScraperGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("Concurrent Chrome Web Scraper with Proxy File Support")
-        self.root.geometry("600x700")
+        self.root.title("ILLPHATED TWITCH UNLIMITED PROXY VIEWERBOT DOWNLOAD AT ILLPHATED.COM")
+        self.root.geometry("720x1280")
 
         # Initialize WebDriver list and proxy list
         self.drivers = []  # Store active WebDriver instances
         self.proxy_list = []  # Store parsed proxies
         self.selected_proxy = tk.StringVar(value="None")
+        # Default user agent
+        self.default_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+        self.user_agent = tk.StringVar(value=self.default_user_agent)
 
         # GUI Elements
-        tk.Label(root, text="Enter URL to Scrape:", font=("Arial", 12)).pack(pady=10)
+        tk.Label(root, text="ENTER TWITCH URL:", font=("Arial", 12)).pack(pady=10)
         self.url_entry = tk.Entry(root, width=50)
         self.url_entry.pack(pady=5)
 
         # Number of Concurrent Sessions
-        tk.Label(root, text="Number of Concurrent Sessions (1-10):", font=("Arial", 10)).pack()
+        tk.Label(root, text="Number of Concurrent Sessions (SUPPORTER UNLIMITED UNLOCKED):", font=("Arial", 10)).pack()
         self.sessions_entry = tk.Entry(root, width=10)
         self.sessions_entry.insert(0, "1")  # Default to 1 session
         self.sessions_entry.pack(pady=5)
@@ -39,16 +42,22 @@ class WebScraperGUI:
         self.browser_mode_menu = ttk.Combobox(root, textvariable=self.browser_mode, values=browser_modes, state="readonly", width=15)
         self.browser_mode_menu.pack(pady=5)
 
+        # User Agent Selection
+        tk.Label(root, text="Custom User Agent:", font=("Arial", 10)).pack()
+        self.user_agent_entry = tk.Entry(root, textvariable=self.user_agent, width=80)
+        self.user_agent_entry.pack(pady=5)
+        tk.Button(root, text="Reset to Default User Agent", command=self.reset_user_agent, font=("Arial", 10)).pack(pady=5)
+
         # Proxy Settings
         tk.Label(root, text="Proxy Settings:", font=("Arial", 12)).pack(pady=10)
         
         tk.Label(root, text="Proxy Type:", font=("Arial", 10)).pack()
         self.proxy_type = tk.StringVar(value="SOCKS5")  # Default to SOCKS5
-        proxy_types = ["None", "SOCKS5"]
+        proxy_types = ["None", "SOCKS5", "HTTP"]
         self.proxy_type_menu = ttk.Combobox(root, textvariable=self.proxy_type, values=proxy_types, state="readonly", width=15)
         self.proxy_type_menu.pack(pady=5)
 
-        tk.Label(root, text="Select Proxy (or Random if SOCKS5):", font=("Arial", 10)).pack()
+        tk.Label(root, text="Select Proxy (or Random if SOCKS5/HTTP):", font=("Arial", 10)).pack()
         self.proxy_selector = ttk.Combobox(root, textvariable=self.selected_proxy, state="readonly", width=50)
         self.proxy_selector.pack(pady=5)
         self.proxy_selector['values'] = ["None"]
@@ -64,8 +73,8 @@ class WebScraperGUI:
         self.log_text['yscrollcommand'] = scrollbar.set
 
         # Buttons
-        tk.Button(root, text="Start Scraping", command=self.scrape_url, font=("Arial", 12)).pack(pady=10)
-        tk.Button(root, text="Stop All Browsers", command=self.stop_all_browsers, font=("Arial", 12)).pack(pady=5)
+        tk.Button(root, text="Start VIEWERS", command=self.scrape_url, font=("Arial", 12)).pack(pady=10)
+        tk.Button(root, text="Stop All VIEWERS", command=self.stop_all_browsers, font=("Arial", 12)).pack(pady=5)
         tk.Button(root, text="Clear Inputs", command=self.clear_inputs, font=("Arial", 12)).pack(pady=5)
         tk.Button(root, text="Exit", command=self.exit_app, font=("Arial", 12)).pack(pady=5)
 
@@ -76,6 +85,11 @@ class WebScraperGUI:
         self.output_dir = "output"
         if not os.path.exists(self.output_dir):
             os.makedirs(self.output_dir)
+
+    def reset_user_agent(self):
+        """Reset user agent to default value."""
+        self.user_agent.set(self.default_user_agent)
+        self.log_message("User agent reset to default")
 
     def log_message(self, message):
         """Append a timestamped message to the log display."""
@@ -97,9 +111,30 @@ class WebScraperGUI:
         return re.match(regex, url) is not None
 
     def validate_proxy(self, proxy):
-        """Validate proxy string format (username:password@host:port or host:port)."""
-        regex = re.compile(r'^(?:[\w]+:[\w]+@)?[\w\.-]+:\d+$')
+        """Validate proxy string format (username:password@host:port or host:port:username:password or host:port)."""
+        regex = re.compile(
+            r'^(?:[\w]+:[\w]+@[a-zA-Z0-9.-]+:\d+$|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+:[\w]+:[\w]+$|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+$)'
+        )
         return re.match(regex, proxy) is not None
+
+    def parse_proxy(self, proxy_string):
+        """Parse proxy string into components (host, port, username, password)."""
+        try:
+            if '@' in proxy_string:
+                # Format: username:password@host:port
+                auth, host_port = proxy_string.split('@')
+                username, password = auth.split(':')
+                host, port = host_port.split(':')
+            elif proxy_string.count(':') == 3:
+                # Format: host:port:username:password
+                host, port, username, password = proxy_string.split(':')
+            else:
+                # Format: host:port
+                host, port = proxy_string.split(':')
+                username, password = None, None
+            return host, port, username, password
+        except Exception:
+            return None, None, None, None
 
     def load_proxy_file(self):
         """Load and parse a proxy list from a .txt file."""
@@ -131,8 +166,6 @@ class WebScraperGUI:
         except Exception as e:
             self.log_message(f"Failed to load proxy file: {str(e)}")
             messagebox.showerror("Error", f"Failed to load proxy file: {str(e)}")
-            self.proxy_selector['values'] = ["None"]
-            self.selected_proxy.set("None")
 
     def start_browser_session(self, url, proxy_string, session_id):
         """Start a single browser session with a given proxy."""
@@ -147,19 +180,38 @@ class WebScraperGUI:
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
             options.add_argument("--ignore-certificate-errors")
+            # Set custom user agent
+            user_agent = self.user_agent.get().strip()
+            options.add_argument(f"--user-agent={user_agent}")
+            self.log_message(f"Session {session_id}: Using user agent: {user_agent}")
 
             # Configure selenium-wire proxy options
             seleniumwire_options = {}
             if proxy_string and self.proxy_type.get() != "None":
                 proxy_scheme = self.proxy_type.get().lower()
-                seleniumwire_options = {
-                    'proxy': {
-                        'http': f"{proxy_scheme}://{proxy_string}",
-                        'https': f"{proxy_scheme}://{proxy_string}",
-                        'no_proxy': 'localhost,127.0.0.1'
+                host, port, username, password = self.parse_proxy(proxy_string)
+                if not host or not port:
+                    self.log_message(f"Session {session_id}: Invalid proxy format: {proxy_string}")
+                    return
+
+                proxy_string_formatted = f"{host}:{port}"
+                if username and password:
+                    seleniumwire_options = {
+                        'proxy': {
+                            'http': f"{proxy_scheme}://{username}:{password}@{host}:{port}",
+                            'https': f"{proxy_scheme}://{username}:{password}@{host}:{port}",
+                            'no_proxy': 'localhost,127.0.0.1'
+                        }
                     }
-                }
-                self.log_message(f"Session {session_id}: Using proxy: {proxy_scheme}://{proxy_string}")
+                else:
+                    seleniumwire_options = {
+                        'proxy': {
+                            'http': f"{proxy_scheme}://{host}:{port}",
+                            'https': f"{proxy_scheme}://{host}:{port}",
+                            'no_proxy': 'localhost,127.0.0.1'
+                        }
+                    }
+                self.log_message(f"Session {session_id}: Using proxy: {proxy_scheme}://{proxy_string_formatted}")
 
             # Initialize WebDriver
             driver = webdriver.Chrome(
@@ -167,7 +219,9 @@ class WebScraperGUI:
                 options=options,
                 seleniumwire_options=seleniumwire_options
             )
-
+            # Set browser resolution
+            driver.set_window_size(1280, 720)
+            self.log_message(f"Session {session_id}: Set resolution to 1280x720")
             # Store driver in list
             self.drivers.append(driver)
 
@@ -199,6 +253,7 @@ class WebScraperGUI:
         proxy_type = self.proxy_type.get()
         selected_proxy = self.selected_proxy.get()
         browser_mode = self.browser_mode.get()
+        user_agent = self.user_agent.get().strip()
 
         # Validate URL
         if not url:
@@ -213,7 +268,7 @@ class WebScraperGUI:
         # Validate number of sessions
         try:
             num_sessions = int(self.sessions_entry.get())
-            if not 1 <= num_sessions <= 10:
+            if not 1 <= num_sessions <= 9:
                 self.log_message("Error: Number of sessions must be between 1 and 10")
                 messagebox.showerror("Error", "Number of sessions must be between 1 and 10.")
                 return
@@ -222,11 +277,17 @@ class WebScraperGUI:
             messagebox.showerror("Error", "Please enter a valid number of sessions.")
             return
 
-        # Validate proxy if SOCKS5
+        # Validate proxy if SOCKS5 or HTTP
         if proxy_type != "None" and not self.proxy_list and selected_proxy == "None":
             self.log_message("Error: No proxies loaded or selected")
             messagebox.showerror("Error", "Please load a proxy file or select a proxy.")
             return
+
+        # Validate user agent
+        if not user_agent:
+            self.log_message("Error: No user agent specified, resetting to default")
+            user_agent = self.default_user_agent
+            self.user_agent.set(user_agent)
 
         # Stop any existing browsers
         self.stop_all_browsers()
@@ -279,6 +340,7 @@ class WebScraperGUI:
         self.selected_proxy.set("None")
         self.proxy_selector['values'] = ["None"]
         self.proxy_list = []
+        self.user_agent.set(self.default_user_agent)
         self.log_message("Inputs cleared")
         self.status_label.config(text="Status: Ready")
 
