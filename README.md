@@ -44,3 +44,16 @@ It features an easy-to-use GUI, supports headed and headless Chrome browsers, ro
 ```bash
 git clone https://github.com/JimWas/Twitch-Viewbot-Proxy.git
 cd Twitch-Viewbot-Proxy
+
+
+
+---
+
+⚠ Disclaimer
+
+This project is for educational purposes only.
+Using it to artificially inflate Twitch view counts violates Twitch’s Terms of Service and may result in account suspension. Use responsibly.
+
+📜 License
+
+MIT License — Free to use, modify, and share.
