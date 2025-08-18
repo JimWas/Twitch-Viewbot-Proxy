@@ -37,15 +37,6 @@ It features an easy-to-use GUI, supports headed and headless Chrome browsers, ro
 
 ---
 
-## 🛠 Installation & Setup
-
-### Clone the repository
-
-```bash
-git clone https://github.com/JimWas/Twitch-Viewbot-Proxy.git
-cd Twitch-Viewbot-Proxy
-
-
 
 ---
 
