@@ -37,7 +37,7 @@ It features an easy-to-use GUI, supports headed and headless Chrome browsers, ro
 
 ---
 
-
+Please note: This is a work-in-progress and things change everyday. Results are not gauranteed. 
 ---
 
 ⚠ Disclaimer
