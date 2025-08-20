@@ -1,19 +1,22 @@
-Twitch Viewbot Proxy — Python Automation Tool for Twitch Viewer Simulation
+**Twitch Viewbot Proxy — Python Automation Tool for Twitch Viewer Simulation**
+
 
 Twitch Viewbot Proxy is a Python-based Twitch viewer bot that uses SOCKS5/HTTP proxies to simulate multiple concurrent viewers on Twitch streams.
 It features an easy-to-use GUI, supports headed and headless Chrome browsers, rotates proxies automatically, and can capture screenshots of streams in real-time.
 
+**✅ Works After August 2025 Twitch Updates — Simply use a JavaScript or iframe embed of the Twitch stream and direct the bot to the embed page instead of the main Twitch URL.**
+
 ⚡ Keywords: twitch viewbot, twitch viewer bot, twitch automation, twitch proxy bot, twitch bot python, selenium twitch bot, twitch browser automation
 
-Support & Donations
+**Support & Donations**
 
-FOR 10+ CONCURRENT SESSIONS PLEASE VISIT MY KO-FI
+**FOR 10+ CONCURRENT SESSIONS PLEASE VISIT MY KO-FI**
 https://ko-fi.com/illphated57469
 
-ANY DONATION OR SHOP PURCHASE GETS SUPPORTER EDITION
+**ANY DONATION OR SHOP PURCHASE GETS SUPPORTER EDITION**
 https://ko-fi.com/illphated57469
 
-🚀 Key Features
+**🚀 Key Features**
 
 Multiple Concurrent Sessions — Launch 1–10 browser instances with configurable delays (30–60 seconds) to avoid detection.
 
@@ -27,18 +30,17 @@ Real-Time GUI Log — View session starts, proxy usage, and screenshot saves liv
 
 Cross-Platform — Works on Windows, macOS, and Linux with Chrome installed.
 
-✅ Works After August 2025 Twitch Updates — Simply use a JavaScript or iframe embed of the Twitch stream and direct the bot to the embed page instead of the main Twitch URL.
 
-📦 Requirements
+**📦 Requirements**
 
 Google Chrome must be installed
 
 Python 3.8+
 
 Your own private HTTP/SOCKS5 proxies (Proxyscrape recommended)
-Buy proxies or free trial here: https://proxyscrape.com/?ref=ztfhzwi
+**Buy proxies or free trial here: https://proxyscrape.com/?ref=ztfhzwi**
 
-Referral link for discount — it costs you nothing and we both get a discount: https://www.webshare.io/?referral_code=elgz3qlqssvs
+**Referral link for discount — it costs you nothing and we both get a discount: https://www.webshare.io/?referral_code=elgz3qlqssvs**
 
 Please note: This is a work-in-progress and things change every day. Results are not guaranteed.
 
