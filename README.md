@@ -5,6 +5,10 @@ It features an easy-to-use GUI, supports headed and headless Chrome browsers, ro
 
 ⚡ Keywords: twitch viewbot, twitch viewer bot, twitch automation, twitch proxy bot, twitch bot python, selenium twitch bot, twitch browser automation
 
+**✅ Works After August 2025 Twitch Updates — Simply use a JavaScript or iframe embed of the Twitch stream and direct the bot to the embed page instead of the main Twitch URL.
+**
+
+
 **Support & Donations
 **
 FOR 10+ CONCURRENT SESSIONS PLEASE VISIT MY KO-FI
@@ -27,10 +31,9 @@ Real-Time GUI Log — View session starts, proxy usage, and screenshot saves liv
 
 Cross-Platform — Works on Windows, macOS, and Linux with Chrome installed.
 
-**✅ Works After August 2025 Twitch Updates — Simply use a JavaScript or iframe embed of the Twitch stream and direct the bot to the embed page instead of the main Twitch URL.
-**
-**📦 Requirements
-**
+
+📦 Requirements
+
 Google Chrome must be installed
 
 Python 3.8+
@@ -42,11 +45,11 @@ Referral link for discount — it costs you nothing and we both get a discount: 
 
 Please note: This is a work-in-progress and things change every day. Results are not guaranteed.
 
-**⚠ Disclaimer
-**
+⚠ Disclaimer
+
 This project is for educational purposes only.
 Using it to artificially inflate Twitch view counts violates Twitch’s Terms of Service and may result in account suspension. Use responsibly.
 
-📜 **License**
+📜 License
 
 MIT License — Free to use, modify, and share.
