@@ -43,6 +43,13 @@ Your own private HTTP/SOCKS5 proxies (Proxyscrape recommended)
 
 **Referral link for discount — it costs you nothing and we both get a discount: https://www.webshare.io/?referral_code=elgz3qlqssvs**
 
+Proxy Format
+This format for http
+IP:port:user:password
+
+And this format for socks5
+username:password@IP:port
+
 Please note: This is a work-in-progress and things change every day. Results are not guaranteed.
 
 ⚠ Disclaimer
