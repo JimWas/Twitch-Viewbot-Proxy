@@ -32,7 +32,8 @@ It features an easy-to-use GUI, supports headed and headless Chrome browsers, ro
 
 - Google Chrome must be installed  
 - Python 3.8+  
-- Your own private HTTP/SOCKS5 proxies (Webshare recommended)  
+- Your own private HTTP/SOCKS5 proxies (Proxyscrape recommended) 
+  Buy proxies or free trial here: https://proxyscrape.com/?ref=ztfhzwi 
   - Referral link for discount - please use to support my work it costs you nothing and we both get a discount: [https://www.webshare.io/?referral_code=elgz3qlqssvs](https://www.webshare.io/?referral_code=elgz3qlqssvs)
 
 ---
