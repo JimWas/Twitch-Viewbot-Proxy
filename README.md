@@ -5,7 +5,7 @@ Twitch Viewbot Proxy is a Python-based Twitch viewer bot that uses SOCKS5/HTTP p
 It features an easy-to-use GUI, supports headed and headless Chrome browsers, rotates proxies automatically, and can capture screenshots of streams in real-time.
 
 **✅ Works After August 2025 Twitch Updates — Simply use a JavaScript or iframe embed of the Twitch stream and direct the bot to the embed page instead of the main Twitch URL.**
-If you don't have your own website you can create an embed page on https://illphated.com/submit-embed/ and then direct the bot to that page instead of directly to your twitch URL.
+If you don't have your own website you can create an embed page on https://forum.illphated.com/Forum-Embeds or https://illphated.com/submit-embed/ and then direct the bot to that page instead of directly to your twitch URL.
 
 ⚡ Keywords: twitch viewbot, twitch viewer bot, twitch automation, twitch proxy bot, twitch bot python, selenium twitch bot, twitch browser automation
 
