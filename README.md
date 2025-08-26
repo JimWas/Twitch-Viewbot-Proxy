@@ -39,7 +39,7 @@ Google Chrome must be installed
 Python 3.8+
 
 Your own private HTTP/SOCKS5 proxies (IPVanish recommended)
-**IPVanish (Please support me with my link and get a free 3GB eSIM): http://illphated.com/IPVanish**
+**IPVanish  (not required but please support me by using my affiliate link, it doesn't cost you anything and helps support my expenses + you get a free 3GB eSIM for creating new phone number verified accounts): https://affiliate.ipvanish.com/aff_c?offer_id=1&aff_id=4237&url_id=145**
 **Proxyscrape: https://proxyscrape.com/?ref=ztfhzwi**
 **Webshare: we both get a discount: https://www.webshare.io/?referral_code=elgz3qlqssvs**
 
