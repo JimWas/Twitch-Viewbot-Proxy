@@ -8,7 +8,7 @@ It features an easy-to-use GUI, supports headed and headless Chrome browsers, ro
 If you don't have your own website you can create an embed page on https://forum.illphated.com/Forum-Embeds or https://illphated.com/submit-embed/ and then direct the bot to that page instead of directly to your twitch URL.
 
 ⚡ Keywords: twitch viewbot, twitch viewer bot, twitch automation, twitch proxy bot, twitch bot python, selenium twitch bot, twitch browser automation
-![Twitch Viewbot Proxy](**https://imgur.com/a/5w8yBJm**)
+![Twitch Viewbot Proxy](https://i.imgur.com/mjlOqvr.png)
 
 
 **Support & Donations**
